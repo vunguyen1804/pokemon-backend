@@ -33,7 +33,7 @@ app.post("/trainers", trainers.createTrainer);
 
 app.delete("/trainers/:uuid", trainers.deleteTrainer);
 
-const port = process.env.port || 3000;
+const port = process.env.port || 8080;
 
 app.listen(port, () => {
   console.log(`listening to port ${port} ` );
