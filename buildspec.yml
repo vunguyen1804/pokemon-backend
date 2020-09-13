@@ -3,6 +3,8 @@ version: 0.2
 phases:
   install:
     commands:
+      # Install nodemon
+      -npm install -g nodemon
       # Install dependencies needed for running tests
       - npm install
 
