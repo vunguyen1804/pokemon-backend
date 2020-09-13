@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-  res.redirect("/info");
+  res.send("back end sever is online.");
 });
 
 app.get("/info", info.findAll);
@@ -33,6 +33,8 @@ app.post("/trainers", trainers.createTrainer);
 
 app.delete("/trainers/:uuid", trainers.deleteTrainer);
 
-app.listen(process.env.port || 3000, () => {
-  console.log(`listening to port ${process.env.port || 3000} ` );
+const port = process.env.port || 3000;
+
+app.listen(port, () => {
+  console.log(`listening to port ${port} ` );
 });
